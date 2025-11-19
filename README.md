@@ -3,6 +3,7 @@ import random
 import string
 
 def generate_strong_password(length=8):
+
     all_characters = string.ascii_letters 
     all_characters += string.digits        
     all_characters += string.punctuation   
@@ -10,9 +11,11 @@ def generate_strong_password(length=8):
     lowercase = string.ascii_lowercase
     digits = string.digits
     symbols = string.punctuation
+
     if length < 4:
         print("Error: Password length must be at least 4 to meet strong criteria.")
         return None
+
     password_list = [
         random.choice(uppercase),
         random.choice(lowercase),
